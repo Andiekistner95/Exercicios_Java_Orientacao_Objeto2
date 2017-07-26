@@ -29,12 +29,23 @@ public class Apostas {
 		Apostas.resultado = resultado;
 	}
 
-	public void verificaResultado(Apostas aposta) {
+	public static void verificaResultado(Apostas aposta) {
 
 		Arrays.sort(aposta.getAposta());
 		Arrays.sort(Apostas.resultado);
 
-		if (Apostas.resultado.equals(aposta)) {
+		boolean acerto = true;
+
+		for (int aux = 0; aux < aposta.getAposta().length; aux++) {
+
+				if (aposta.getAposta()[aux] != Apostas.resultado[aux]) {
+					
+					acerto = false;
+					break;
+				}
+			}
+
+		if (acerto == true) {
 			System.out.println("Aposta vencedora");
 
 		} else {

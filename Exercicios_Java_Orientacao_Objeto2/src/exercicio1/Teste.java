@@ -11,7 +11,11 @@ public static void main(String[] args) {
 	
 	Apostas.setResultado(new int[] {59, 25, 11, 9, 10, 2});
 	
-	aposta1.verificaResultado(aposta1);
+	Apostas.verificaResultado(aposta1);
+	Apostas.verificaResultado(aposta2);
+	Apostas.verificaResultado(aposta3);
+	Apostas.verificaResultado(aposta4);
+	Apostas.verificaResultado(aposta5);
 }
 }
 
